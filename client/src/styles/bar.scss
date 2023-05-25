@@ -1,0 +1,48 @@
+@import './variables.scss';
+
+.toolbar, .setting-bar {
+    height: $bar-height;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px gray;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.toolbar {
+    z-index: 999;
+
+    &__btn {
+        width: 25px;
+        height: 25px;
+        border: none;
+        outline: none;
+        background: transparent;
+        margin-left: 10px;
+        cursor: pointer;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .brush  { background-image: url('../assets/images/brush.png'); }
+    .rect   { background-image: url('../assets/images/rect.png'); }
+    .circle { background-image: url('../assets/images/circle.png'); }
+    .eraser { background-image: url('../assets/images/eraser.png');}
+    .line   { background-image: url('../assets/images/line.png'); }
+    .color { margin-left: 10px; }
+    .undo { 
+        background-image: url('../assets/images/undo.png'); 
+        margin-left: auto;
+    }
+    .redo { background-image: url('../assets/images/redo.png'); }
+    .save { 
+        background-image: url('../assets/images/save.png');
+        margin-right: 10px; 
+    }
+}
+
+.setting-bar {
+    top: $bar-height
+}
